@@ -1,0 +1,229 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    margin-top: 20px; /* Adjust this value to add space above the navbar */
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #333;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #007bff;
+}
+
+.navbar ul li a.active {
+    border-bottom: 2px solid #007bff;
+}
+
+/* Page Title */
+.page-title {
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 2.5rem;
+    color: #007bff;
+}
+
+/* Box Style for Content */
+.box {
+    width: 90%;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Same style for both forms */
+.job-form, .search-form {
+    margin: 2rem auto;
+    width: 50%; /* Change width here */
+    max-width: 700px; /* Adjust max-width as needed */
+    background-color: #fff;
+    padding: 20px; /* Adjust padding here */
+    border-radius: 8px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Elements */
+.form-section {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem; /* Change font size here */
+    color: #555;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+}
+
+.input-text, .input-select, .input-textarea {
+    width: 100%;
+    padding: 10px; /* Adjust padding here */
+    font-size: 0.9rem; /* Change font size here */
+    border: none;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.input-text:focus, .input-select:focus {
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 5px; /* Adjust for consistency */
+}
+
+/* Buttons */
+.btn.submit-btn, .btn.reset-btn {
+    width: 100%;
+    padding: 12px; /* Adjust padding here */
+    font-size: 1rem; /* Change font size here */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn.submit-btn:hover, .btn.reset-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1rem;
+}
+
+.footer a:hover {
+    color: #0056b3;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .box, .job-form, .search-form {
+        width: 95%;
+    }
+
+    .btn.submit-btn, .btn.reset-btn {
+        width: 100%;
+    }
+}
+
+/* Inline Styles */
+.radio-inline, .checkbox-inline {
+    display: flex;
+    align-items: center; /* Ensures items are vertically centered */
+    gap: 15px; /* Adjust gap to space elements */
+}
+
+.radio-inline input[type="radio"], .checkbox-inline input[type="checkbox"] {
+    margin: 0; /* Removes default margin */
+    vertical-align: middle; /* Aligns the input vertically with the text */
+}
+
+.radio-inline label, .checkbox-inline label {
+    margin: 0; /* Removes default margin */
+    line-height: 1.6; /* Adjust line-height to match the input */
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center; /* Center the buttons if desired */
+}
+
+.form-buttons input[type="submit"], .form-buttons input[type="reset"] {
+    margin: 0 10px; /* Adjust the margin as needed */
+}
+
+/* Error Messages */
+.error-box {
+    width: 100%;
+    max-width: 600px;
+    margin: 1rem auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.error-message {
+    font-size: 0.9rem;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #ffe6e6;
+    margin: 0.5rem 0;
+}
+
+.error-message::before {
+    content: '* ';
+    color: red;
+    font-weight: bold;
+}
+
+.box {
+    width: 90%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
