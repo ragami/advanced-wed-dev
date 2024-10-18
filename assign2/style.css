@@ -1,0 +1,332 @@
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Applying the font to the entire document */
+body {
+  font-family: 'Roboto', sans-serif; /* Changing font to Roboto */
+}
+
+/* Navigation styles */
+.navigation {
+  background: linear-gradient(135deg, #ffffff, #f0f4f8); /* Light gradient background */
+  padding: 15px 30px; /* Added padding */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex; /* Using flex for layout */
+  justify-content: space-between; /* Space between logo and nav */
+  align-items: center; /* Center align */
+}
+
+.navigation h1 {
+  color: #333; /* Dark text for contrast */
+  font-size: 28px;
+  margin: 0; /* Remove margin for better alignment */
+  letter-spacing: 1px; /* Increased letter spacing */
+}
+
+.nav {
+  list-style-type: none;
+  display: flex;
+  margin: 0; /* Remove margin */
+}
+
+.nav-link {
+  margin-left: 30px; /* Spacing between links */
+}
+
+.nav-link a {
+  text-decoration: none;
+  color: #333; /* Dark text color */
+  font-weight: 700; /* Bold text */
+  font-size: 18px; /* Larger font size */
+  padding: 12px 20px; /* Padding for clickable area */
+  border-radius: 5px; /* More rounded corners */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+.nav-link a:hover {
+  background-color: rgba(200, 200, 200, 0.3); /* Light transparent background on hover */
+  color: #008080; /* Teal text on hover */
+}
+
+/* Responsive Media Query */
+@media (max-width: 600px) {
+  .navigation {
+    flex-direction: column; /* Stack items vertically on small screens */
+    padding: 10px; /* Less padding on small screens */
+  }
+
+  .navigation h1 {
+    font-size: 24px; /* Smaller title on mobile */
+    margin-bottom: 10px; /* Space below title */
+  }
+
+  .nav {
+    flex-direction: column; /* Stack links vertically */
+    align-items: flex-start; /* Align links to the left */
+    width: 100%; /* Full width for mobile */
+  }
+
+  .nav-link {
+    margin-left: 0; /* Remove left margin on mobile */
+    margin-bottom: 10px; /* Spacing between links */
+  }
+
+  .nav-link a {
+    font-size: 16px; /* Smaller font size on mobile */
+    padding: 10px; /* Adjust padding for mobile */
+  }
+}
+
+/* Main content styles */
+.body {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f7f9fc; /* Light background */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.body h1 {
+  color: #008080; /* Teal */
+  margin-bottom: 20px;
+}
+
+.body p {
+  margin-bottom: 10px;
+  color: #555; /* Medium grey for text */
+}
+
+.email {
+  color: #008080; /* Teal */
+  text-decoration: none;
+}
+
+.email:hover {
+  text-decoration: underline;
+}
+
+.database {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f7f9fc; /* Light background */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.database p {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #e9ecef; /* Slightly darker than background */
+  border-radius: 4px;
+}
+
+.database h2 {
+  color: #008080; /* Teal */
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.registration-form {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px; /* Keeping padding for form */
+  background-color: #f7f9fc; /* Light background */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333; /* Dark label color */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: calc(100% - 20px); /* Adjust width for better alignment */
+  padding: 10px;
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px;
+  background-color: #ffffff; /* White input background */
+  color: #333; /* Dark text for input */
+  margin: 0; /* Reset margin */
+}
+
+/* Optional: Adding some margin to input fields for better spacing */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  margin: 0 auto; /* Center align */
+}
+
+
+input[type="submit"],
+.clear-button {
+  background-color: #008080; /* Teal */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover,
+.clear-button:hover {
+  background-color: #007b66; /* Darker teal on hover */
+}
+
+.errors {
+  background-color: #f8d7da; /* Light red for error background */
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.error {
+  color: #721c24; /* Dark red for error text */
+  margin: 5px 0;
+}
+
+.return-to-home {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.return-to-home a {
+  display: inline-block;
+  font-size: 16px;
+  color: #008080; /* Teal */
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid #008080; /* Teal border */
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.return-to-home a:hover {
+  background-color: #008080; /* Teal */
+  color: #ffffff; /* White */
+}
+
+/* Friend List Styles */
+.content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f7f9fc; /* Light background */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+  color: #008080; /* Teal */
+  margin-bottom: 10px;
+}
+
+.friend-count {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.friend-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.friend-table th,
+.friend-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ccc; /* Light border */
+}
+
+.friend-table th {
+  background-color: #e9ecef; /* Table header background */
+  font-weight: bold;
+}
+
+.friend-table tr:hover {
+  background-color: #f1f1f1; /* Light row on hover */
+}
+
+.unfriend-button {
+  background-color: #ff4757; /* Bright red for unfriend */
+  color: #ffffff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.unfriend-button:hover {
+  background-color: #ff3237; /* Darker red on hover */
+}
+
+/* Footer styles */
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #f7f9fc; /* Light footer background */
+  color: #333; /* Dark text color */
+  margin-top: 20px;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+.footer a {
+  color: #008080; /* Teal */
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.button-container {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center the buttons horizontally */
+  margin-top: 20px; /* Space above the buttons */
+}
+
+.button-container input {
+  margin: 0 10px; /* Horizontal space between buttons */
+  padding: 10px 20px; /* Padding for better button size */
+  cursor: pointer; /* Change cursor to pointer for buttons */
+}
+
+input[type="submit"],
+.clear-button,
+.return-to-home a {
+  display: inline-block; /* Ensure buttons are inline */
+  background-color: #008080; /* Teal */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center; /* Center text inside buttons */
+}
+
+input[type="submit"]:hover,
+.clear-button:hover,
+.return-to-home a:hover {
+  background-color: #007b66; /* Darker teal on hover */
+}
